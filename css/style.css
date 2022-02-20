@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+	/* Color */
+	--primary-color: hsl(193, 38%, 86%);
+	--secondary-color: hsl(150, 100%, 66%);
+
+	--neutral-100: hsl(217, 19%, 38%, 0.5);
+	--neutral-400: #202733;
+
+	/* Font-family */
+	--ff: "Manrope", sans-serif;
+
+	/* Font-size */
+	--fs-xs: 0.8125rem;
+	--fs-normal: 1.75rem;
+}
+
+body {
+	font-family: var(--ff);
+	font-size: var(--fs-normal);
+	color: var(--primary-color);
+	background-color: var(--neutral-400);
+	display: grid;
+	place-content: center;
+}
+
+/* Component CSS */
+.app__content {
+	width: min(33.75rem, 91%);
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: var(--neutral-100);
+	border-radius: 0.5rem;
+	color: var(--primary-color);
+	padding: 1.5rem;
+	margin-inline: auto;
+	position: relative;
+}
+
+.app__content--id {
+	color: var(--secondary-color);
+	font-size: var(--fs-xs);
+	margin-bottom: 1rem;
+	margin-top: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.4rem;
+}
+
+.divider {
+	margin-block: 3rem;
+}
+
+.app__content--dice {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--secondary-color);
+	margin: 0 0 -3.5rem;
+}
+
+.app__content--dice:hover {
+	cursor: pointer;
+	box-shadow: 0 0 2.25rem var(--secondary-color);
+}
+
+/* MEDIA */
+
+@media only screen and (max-width: 36rem) {
+	.app__content--id {
+		font-size: 0.6875rem;
+	}
+
+	.app__content--quote {
+		font-size: 1.5rem;
+	}
+}

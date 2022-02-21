@@ -13,7 +13,6 @@ const getAdvice = async () => {
 		.then((data) => data.slip)
 		.then((quote) => {
 			// console.log(quote);
-
 			advice_id.textContent = quote.id;
 			advice_text.textContent = `“${quote.advice}”`;
 		});
